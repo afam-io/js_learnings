@@ -11,3 +11,4 @@ const perimeter = (n) => {
   console.log({ fibSeqArr });
   return fibSeqArr.reduce((a, b) => a + b) * 4;
 };
+// https://www.codewars.com/kata/559a28007caad2ac4e000083/train/javascript
