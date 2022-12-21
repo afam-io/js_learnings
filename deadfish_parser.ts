@@ -16,13 +16,12 @@ parse("iiisdoso") => [8, 64]
 /* 
 Plan
 1. function accepts a string need to loop through said string
-2. Match value in string to idso and operate from there
-
+2. Match value in string to idso and peform relevant operation from there
 
 */
 
 const parse = (data: string): number[] => {
-  let arr = [];
+  let arr: number[] = [];
   let currentNumber = 0;
   for (let i = 0; i < data.length; i++) {
     switch (data[i]) {
@@ -31,10 +30,16 @@ const parse = (data: string): number[] => {
         break;
       case 'd':
         currentNumber--;
+        break;
+      case 's':
+        currentNumber = currentNumber ** 2;
+        break;
+      case 'o':
+        arr.push(currentNumber);
     }
   }
 
   return arr;
 };
 
-parse('iiisdoso');
+console.log(parse('iiisdoso')); // should give [8,64]
