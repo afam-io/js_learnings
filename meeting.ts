@@ -19,3 +19,5 @@ It can happen that in two distinct families with the same family name two people
 const meeting = (s: string): string => {
   return s;
 };
+
+export default meeting;
