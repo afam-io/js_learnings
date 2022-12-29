@@ -17,7 +17,12 @@ It can happen that in two distinct families with the same family name two people
 */
 
 const meeting = (s: string): string => {
-  console.log(s.toUpperCase().split(';'));
+  // use map with something like this .map(x => x.split)
+  // (idea is to reverse the names so the surname comes first)
+  // then order names
+  // then rejoin with parenthesis
+  const result = s.toUpperCase().split(';');
+  console.log(result);
   return s;
 };
 
