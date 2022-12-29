@@ -17,7 +17,12 @@ It can happen that in two distinct families with the same family name two people
 */
 
 const meeting = (s: string): string => {
+  console.log(s.toUpperCase().split(';'));
   return s;
 };
+
+meeting(
+  'Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill'
+);
 
 export default meeting;
