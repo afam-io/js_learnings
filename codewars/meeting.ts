@@ -16,18 +16,18 @@ So the result of function meeting(s) will be:
 It can happen that in two distinct families with the same family name two people have the same first name too.
 */
 
-const meeting = (s: string): string => {
+const meeting = (s: string): any => {
   // use map with something like this .map(x => x.split)
   // (idea is to reverse the names so the surname comes first)
   // then order names
   // then rejoin with parenthesis
-  const result = s.toUpperCase().split(';');
-  console.log(result);
-  return s;
-};
+  const result = s
+    .toUpperCase()
+    .split(';')
+    .map((a) => '(' + a + ')');
 
-meeting(
-  'Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill'
-);
+  // console.log(result);
+  return result;
+};
 
 export default meeting;
