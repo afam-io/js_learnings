@@ -20,14 +20,15 @@ const meeting = (s: string): any => {
   // use map with something like this .map(x => x.split)
   // (idea is to reverse the names so the surname comes first)
   // then order names
+  // order by surname first if surnames match order by first name
   // then rejoin with parenthesis
   const result = s
     .toUpperCase()
     .split(';')
-    .map((a) => '(' + a + ')');
+    .map((a) => a.split(':').reverse().join(', '));
 
-  // console.log(result);
   return result;
 };
 
 export default meeting;
+// [["CORWILL", "FRED"], ["CORWILL", "WILFRED"], ["TORNBULL", "BARNEY"], ["TORNBULL", "BETTY"], ["TORNBULL", "BJON"], ["CORWILL", "RAPHAEL"], ["CORWILL", "ALFRED"]]
