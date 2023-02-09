@@ -1,7 +1,7 @@
 import { describe, expect, test } from '@jest/globals';
 import humanReadable from './time_conversion';
 
-describe('human readable time conversion', () => {
+describe.only('human readable time conversion', () => {
   test('humanReadable(0)', () => {
     expect(humanReadable(0)).toBe('00:00:00');
   });
